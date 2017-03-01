@@ -6,7 +6,7 @@
 # === Parameters
 #
 # [*version*]
-# Version of Kibana4 that gets installed.  Defaults to the latest version
+# Version of Kibana5 that gets installed.  Defaults to the latest version
 # available in the `package_repo_version` that is selected.
 #
 # [*manage_repo*]
@@ -30,7 +30,7 @@
 # manual. Defaults to 'true'.
 #
 # [*service_name*]
-# Name of the Kibana4 service. Defaults to 'kibana'.
+# Name of the Kibana5 service. Defaults to 'kibana'.
 #
 # [*babel_cache_path*]
 # Kibana uses babel (https://www.npmjs.com/package/babel) which writes it's
@@ -80,7 +80,7 @@ class kibana5 (
   Class['kibana5::config'] ~>
   Class['kibana5::service']
 
-  Kibana4::Plugin {
+  Kibana5::Plugin {
     require => Class['kibana5::install']
   }
 
